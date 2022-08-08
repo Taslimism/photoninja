@@ -1,8 +1,5 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
-import lens from "../assets/lens.png";
-import search from "../assets/search.png";
 
 const fetchHeroPhoto = async (searchTerm) => {
 	if (searchTerm === "/") {
@@ -24,7 +21,6 @@ const fetchHeroPhoto = async (searchTerm) => {
 
 const Hero = ({ searchTerm }) => {
 	const [heroImage, setHeroImage] = useState();
-	const { pathname } = useLocation();
 
 	useEffect(() => {
 		(async () => {
